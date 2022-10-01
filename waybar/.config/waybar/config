@@ -11,10 +11,9 @@
     "format-icons": {
       "1:term": "",
       "2:web": "",
-      "3:code": "",
-      "4:chat": "",
-      "5:chill": "",
-      "6:docs": "",
+      "3:chat": "",
+      "4:chill": "",
+      "5:docs": "",
       "urgent": "",
       "focused": "",
       "default": ""
