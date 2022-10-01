@@ -6,7 +6,7 @@ set $up k
 set $right l
 set $term alacritty
 set $menu wofi --show drun -i | xargs swaymsg exec --
-set $bg /home/doomguy/Downloads/1224254.jpg
+set $bg ~/.local/share/backgrounds/3829125.jpg
 
 # Startup
 exec_always --no-startup-id 'nm-applet --indicator'
