@@ -89,6 +89,9 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 bindsym $mod+d exec $menu
 
+# Change keyboard layout
+bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next 
+
 # Brightness control
 bindsym --locked XF86MonBrightnessUp exec light -T 1.4
 bindsym --locked XF86MonBrightnessDown exec light -T 0.72
@@ -114,6 +117,7 @@ bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
