@@ -7,6 +7,7 @@
 - wl-clipboard
 - pavucontrol
 - nmtui
+- light
 
 ## Keyboard layout
 
