@@ -1,4 +1,4 @@
-### Variables
+# Variables
 set $mod Mod4
 set $left h
 set $down j
@@ -14,8 +14,8 @@ exec_always --no-startup-id 'blueman-applet'
 output "*" bg $bg fill
 
 # Windows config
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
 
 gaps inner 5
 gaps outer 5
@@ -75,7 +75,6 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 
 # Window rules
-
 floating_modifier $mod normal
 
 bindsym $mod+$left focus left
