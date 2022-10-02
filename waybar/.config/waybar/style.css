@@ -7,24 +7,16 @@
 }
 
 window#waybar {
-  /* background: #222222; */
   background: transparent;
   color: white;
 }
 
 #window {
-  font-weight: bold;
   font-family: "FiraCode Nerd Font";
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
   padding: 0 8px;
-  /* background: #222222; */
   background: transparent;
   color: white;
   border-top: 2px solid transparent;
@@ -35,8 +27,7 @@ window#waybar {
 }
 
 #mode {
-  background: #64727d;
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid white;
 }
 
 #clock,
@@ -49,21 +40,22 @@ window#waybar {
   margin: 0 8px;
 }
 
-#clock {
-  font-weight: bold;
-}
-
-#battery {
-}
-
-#battery.charging {
-}
-
 @keyframes blink {
   to {
-    background-color: #ffffff;
-    color: black;
+    color: red;
   }
+}
+
+#cpu,
+#memory,
+#network,
+#network.disconnected,
+#pulseaudio,
+#pulseaudio.muted,
+#tray,
+#clock,
+#battery,
+#battery.charging {
 }
 
 #battery.warning:not(.charging) {
@@ -73,26 +65,4 @@ window#waybar {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-#cpu {
-}
-
-#memory {
-}
-
-#network {
-}
-
-#network.disconnected {
-  background: #f53c3c;
-}
-
-#pulseaudio {
-}
-
-#pulseaudio.muted {
-}
-
-#tray {
 }
