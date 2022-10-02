@@ -6,6 +6,7 @@ WIP configs for sway.
 
 - sway
 - waybar
+- mako
 - wl-clipboard
 - pavucontrol
 - light
