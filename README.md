@@ -10,3 +10,11 @@ WIP configs for sway.
 - pavucontrol
 - light
 - blueman
+
+## TODO
+
+- Update dotfiles
+- Unable to download files in Chrome
+  - Works fine in Firefox
+- Setup notifications
+- Wofi styling
