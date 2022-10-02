@@ -1,17 +1,17 @@
 {
   "height": 30,
   "spacing": 4,
-  "modules-left": ["sway/workspaces"],
-  "modules-center": [],
-  "modules-right": ["pulseaudio", "battery", "clock", "tray"],
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "battery", "tray"],
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name} {icon}",
     "format-icons": {
       "1:term": "",
-      "2:web": "",
-      "3:chat": "",
+      "2:web": "",
+      "3:slack": "",
       "4:chill": "",
       "5:docs": "",
       "urgent": "",
@@ -27,8 +27,8 @@
     "spacing": 10
   },
   "clock": {
-    "tooltip-format": "{:%Y %B}\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%d-%m-%Y}"
+    "format": "{:%A %d %B, %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
     "states": {

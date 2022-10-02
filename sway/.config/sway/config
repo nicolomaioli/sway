@@ -11,6 +11,7 @@ set $bg ~/.local/share/backgrounds/3829125.jpg
 # Startup
 exec_always --no-startup-id 'nm-applet --indicator'
 exec_always --no-startup-id 'blueman-applet'
+exec mako
 output "*" bg $bg fill
 
 # Windows config
@@ -99,7 +100,7 @@ bindsym $mod+Shift+Right move right
 # Workspaces:
 bindsym $mod+1 workspace "1:term"
 bindsym $mod+2 workspace "2:web"
-bindsym $mod+3 workspace "3:chat"
+bindsym $mod+3 workspace "3:slack"
 bindsym $mod+4 workspace "4:chill"
 bindsym $mod+5 workspace "5:docs"
 bindsym $mod+6 workspace "6:6"
@@ -110,7 +111,7 @@ bindsym $mod+0 workspace "10:10"
 
 bindsym $mod+Shift+1 move container to workspace "1:term"
 bindsym $mod+Shift+2 move container to workspace "2:web"
-bindsym $mod+Shift+3 move container to workspace "3:chat"
+bindsym $mod+Shift+3 move container to workspace "3:slack"
 bindsym $mod+Shift+4 move container to workspace "4:chill"
 bindsym $mod+Shift+5 move container to workspace "5:docs"
 bindsym $mod+Shift+6 move container to workspace "6:6"
