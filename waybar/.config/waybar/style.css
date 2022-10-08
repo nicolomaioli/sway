@@ -19,11 +19,11 @@ window#waybar {
   padding: 0 8px;
   background: transparent;
   color: white;
-  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 #mode {
