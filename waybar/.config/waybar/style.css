@@ -15,6 +15,13 @@ window#waybar {
   font-family: "FiraCode Nerd Font";
 }
 
+#custom-distro {
+  padding: 0 8px;
+  background: transparent;
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+
 #workspaces button {
   padding: 0 8px;
   background: transparent;

@@ -15,7 +15,7 @@
     "tray"
   ],
   "custom/distro": {
-    "format": " {icon}  ",
+    "format": "{icon}",
     "format-icons": ""
   },
   "sway/workspaces": {
