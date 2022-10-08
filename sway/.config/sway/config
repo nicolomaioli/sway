@@ -7,6 +7,7 @@ set $right l
 set $term alacritty
 set $menu wofi --show drun -i | xargs swaymsg exec --
 set $bg ~/.local/share/backgrounds/3829125.jpg
+set $bglock /usr/share/backgrounds/doomguy/rickroll_4k.png
 
 # Startup
 exec_always --no-startup-id 'nm-applet --indicator'
@@ -24,8 +25,8 @@ gaps outer 5
 for_window [app_id="pavucontrol"] floating enable, resize set width 550 px height 600px
 
 # Lock
-exec swayidle -w before-sleep 'swaylock -f -c 222222'
-bindsym $mod+Control+q exec ~/.config/sway/scripts/lock.sh
+exec swayidle -w before-sleep 'swaylock -f -i $bglock'
+bindsym $mod+Control+q exec swaylock -i $bglock
 
 # Input configuration
 input type:touchpad {
@@ -49,7 +50,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+d exec $menu
 bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next 
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit?' -B 'Yes' 'swaymsg exit'
+bindsym $mod+Shift+e exec ~/.config/wofi/scripts/exit.sh
 
 ## Windows
 bindsym $mod+b splith

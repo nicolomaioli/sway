@@ -1,31 +1,43 @@
+@define-color colbgd #282a36;
+@define-color colcur #44475a;
+@define-color colfgd #f8f8f2;
+@define-color colcmt #6272a4;
+@define-color colcya #8be9fd;
+@define-color colgrn #50fa7b;
+@define-color colora #ffb86c;
+@define-color colpnk #ff79c6;
+@define-color colpur #bd93f9;
+@define-color colred #ff5555;
+@define-color colyel #f1fa8c;
+
 * {
   font-family: "FiraCode Nerd Font";
-  font-size: 13px;
+  font-size: 14px;
 }
 
 window {
   margin: 0px;
-  border: 1px solid #bd93f9;
-  background-color: #282a36;
+  border: 1px solid @colcmt;
+  background-color: @colbgd;
 }
 
 #input {
   margin: 5px;
   border: none;
-  color: #f8f8f2;
-  background-color: #44475a;
+  color: @colfgd;
+  background-color: @colcur;
 }
 
 #inner-box {
   margin: 5px;
   border: none;
-  background-color: #282a36;
+  background-color: @colbgd;
 }
 
 #outer-box {
   margin: 5px;
   border: none;
-  background-color: #282a36;
+  background-color: @colbgd;
 }
 
 #scroll {
@@ -36,9 +48,9 @@ window {
 #text {
   margin: 5px;
   border: none;
-  color: #f8f8f2;
+  color: @colfgd;
 }
 
 #entry:selected {
-  background-color: #44475a;
+  background-color: @colpnk;
 }
