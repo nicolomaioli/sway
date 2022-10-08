@@ -10,7 +10,7 @@
     "format": "{name} {icon}",
     "format-icons": {
       "1:term": "",
-      "2:web": "",
+      "2:web": "",
       "3:slack": "",
       "4:chill": "",
       "5:docs": "",
