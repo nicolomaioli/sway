@@ -20,26 +20,23 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# Startup
-exec_always --no-startup-id 'nm-applet --indicator'
-exec_always --no-startup-id 'blueman-applet'
-exec mako
-output "*" bg $bg fill
+# Dracula theme
+# class                   border    bground   text      indicator child_border
+client.focused            #83CAFA   #51A2DA   #FFFFFF   #83CAFA   #51A2DA
+client.focused_inactive   #8C8C8C   #4C4C4C   #FFFFFF   #4C4C4C   #8C8C8C
+client.unfocused          #4C4C4C   #222222   #888888   #292D2E   #222222
+client.urgent             #EC69A0   #DB3279   #FFFFFF   #DB3279   #DB3279
+client.placeholder        #000000   #0C0C0C   #FFFFFF   #000000   #0C0C0C
+client.background         #FFFFFF
 
-# Windows config
-default_border pixel 0
-default_floating_border pixel 0
+# Windows
+default_border pixel 1
+default_floating_border pixel 1
 
 gaps inner 5
 gaps outer 5
 
-for_window [app_id="pavucontrol"] floating enable, resize set width 550 px height 600px
-
-# Lock
-exec swayidle -w before-sleep 'swaylock -f -i $bglock'
-bindsym $mod+Control+q exec swaylock -i $bglock
-
-# Input configuration
+# Input
 input type:touchpad {
   dwt enabled
   tap enabled
@@ -55,7 +52,19 @@ input type:keyboard {
     xkb_options caps:ctrl_modifier
 }
 
-# Key bindings
+# Startup
+exec mako
+output "*" bg $bg fill
+exec swayidle -w before-sleep 'swaylock -f -i $bglock'
+exec_always --no-startup-id 'nm-applet --indicator'
+exec_always --no-startup-id 'blueman-applet'
+exec --no-startup-id $term --title term
+
+# Special
+for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
+for_window [title="term"] move scratchpad
+
+# Bindings
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r reload
@@ -63,6 +72,18 @@ bindsym $mod+d exec $menu
 bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym $mod+Shift+e exec ~/.config/wofi/scripts/exit.sh
 bindsym $mod+c exec ~/.config/wofi/scripts/code.sh
+bindsym $mod+Control+q exec swaylock -i $bglock
+bindsym $mod+r mode "resize"
+
+## Brightness
+bindsym --locked XF86MonBrightnessUp exec light -T 1.4
+bindsym --locked XF86MonBrightnessDown exec light -T 0.72
+
+## Volume
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 
 ## Windows
 bindsym $mod+b splith
@@ -76,20 +97,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-
-## Brightness control
-bindsym --locked XF86MonBrightnessUp exec light -T 1.4
-bindsym --locked XF86MonBrightnessDown exec light -T 0.72
-
-## Volume control
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
-
-# Window rules
 floating_modifier $mod normal
 
+## Focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -110,7 +120,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Workspaces:
+# Workspaces
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -148,8 +158,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 # Status Bar:
 bar {
