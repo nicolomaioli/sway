@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: "FiraCode Nerd Font";
-  font-size: 13px;
+  font-size: 12px;
   min-height: 0;
 }
 
@@ -13,6 +13,7 @@ window#waybar {
 
 #window {
   font-family: "FiraCode Nerd Font";
+  font-size: 12px;
 }
 
 #custom-distro {
@@ -22,7 +23,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0 8px;
+  padding: 0 5px;
   color: white;
   background: transparent;
   border-bottom: 2px solid transparent;
@@ -51,8 +52,8 @@ window#waybar {
 #clock,
 #battery,
 #battery.charging {
-  padding: 0 3px;
-  margin: 0 8px;
+  padding: 0 5px;
+  margin: 0 5px;
 }
 
 @keyframes blink {

@@ -2,7 +2,6 @@
   "height": 30,
   "spacing": 2,
   "modules-left": [
-    "custom/distro",
     "sway/workspaces",
     "sway/mode"
   ],
@@ -16,10 +15,6 @@
     "battery",
     "tray"
   ],
-  "custom/distro": {
-    "format": "{icon}",
-    "format-icons": ""
-  },
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
