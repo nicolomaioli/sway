@@ -16,12 +16,6 @@ window#waybar {
   font-size: 12px;
 }
 
-#language {
-  padding: 0 5px;
-  background: transparent;
-  border-bottom: 2px solid transparent;
-}
-
 #workspaces button {
   padding: 0 5px;
   color: white;
@@ -49,6 +43,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
+#language,
 #network,
 #network.disconnected,
 #pulseaudio,
