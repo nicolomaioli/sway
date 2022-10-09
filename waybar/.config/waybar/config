@@ -10,6 +10,8 @@
     "clock"
   ],
   "modules-right": [
+    "cpu",
+    "memory",
     "pulseaudio",
     "battery",
     "tray"
@@ -55,6 +57,16 @@
       "",
       ""
     ]
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{}% ",
+    "max-length": 10
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "{usage}% ﬙",
+    "max-length": 10
   },
   "pulseaudio": {
     "on-click": "pavucontrol",

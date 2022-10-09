@@ -18,14 +18,13 @@ window#waybar {
 #custom-distro {
   padding: 0 8px;
   background: transparent;
-  color: white;
   border-bottom: 2px solid transparent;
 }
 
 #workspaces button {
   padding: 0 8px;
-  background: transparent;
   color: white;
+  background: transparent;
   border-bottom: 2px solid transparent;
 }
 
@@ -40,19 +39,8 @@ window#waybar {
 #clock,
 #battery,
 #pulseaudio,
-#custom-spotify,
 #tray,
-#mode {
-  padding: 0 3px;
-  margin: 0 8px;
-}
-
-@keyframes blink {
-  to {
-    color: red;
-  }
-}
-
+#mode,
 #cpu,
 #memory,
 #network,
@@ -63,10 +51,17 @@ window#waybar {
 #clock,
 #battery,
 #battery.charging {
+  padding: 0 3px;
+  margin: 0 8px;
+}
+
+@keyframes blink {
+  to {
+    color: red;
+  }
 }
 
 #battery.warning:not(.charging) {
-  color: white;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
