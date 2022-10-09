@@ -2,7 +2,6 @@
   "height": 30,
   "spacing": 2,
   "modules-left": [
-    "sway/language",
     "sway/workspaces",
     "sway/mode"
   ],
@@ -14,6 +13,7 @@
     "memory",
     "pulseaudio",
     "battery",
+    "sway/language",
     "tray"
   ],
   "sway/workspaces": {
@@ -21,11 +21,11 @@
     "all-outputs": true,
     "format": "{name} {icon}",
     "format-icons": {
-      "1:code": "",
-      "2:web": "",
-      "3:term": "",
-      "4:slack": "",
-      "5:music": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
       "urgent": "",
       "focused": "",
       "default": ""
@@ -35,7 +35,7 @@
     "format": "{}"
   },
   "sway/language": {
-    "format": "{short}",
+    "format": "{short} {icon}",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
   "tray": {
