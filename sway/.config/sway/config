@@ -52,6 +52,11 @@ input type:keyboard {
 	xkb_options caps:ctrl_modifier
 }
 
+# Special
+for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
+for_window [title="term"] move scratchpad
+assign [class="Google-chrome"] workspace $ws2
+
 # Startup
 exec mako
 output "*" bg $bg fill
@@ -59,10 +64,7 @@ exec swayidle -w before-sleep 'swaylock -f -i $bglock'
 exec_always --no-startup-id 'nm-applet --indicator'
 exec_always --no-startup-id 'blueman-applet'
 exec --no-startup-id $term --title term
-
-# Special
-for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
-for_window [title="term"] move scratchpad
+exec google-chrome-stable
 
 # Bindings
 bindsym $mod+Return exec $term
