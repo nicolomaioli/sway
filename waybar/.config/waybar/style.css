@@ -16,8 +16,8 @@ window#waybar {
   font-size: 12px;
 }
 
-#custom-distro {
-  padding: 0 8px;
+#language {
+  padding: 0 5px;
   background: transparent;
   border-bottom: 2px solid transparent;
 }
