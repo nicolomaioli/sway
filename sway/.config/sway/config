@@ -60,8 +60,9 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r reload
 bindsym $mod+d exec $menu
-bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next 
+bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym $mod+Shift+e exec ~/.config/wofi/scripts/exit.sh
+bindsym $mod+c exec ~/.config/wofi/scripts/code.sh
 
 ## Windows
 bindsym $mod+b splith
