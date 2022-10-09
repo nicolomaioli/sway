@@ -33,6 +33,11 @@ window#waybar {
   border-bottom: 2px solid;
 }
 
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
 #mode {
   border-bottom: 2px solid white;
 }
