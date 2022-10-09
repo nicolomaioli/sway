@@ -23,11 +23,16 @@
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "format": "{name}",
+    "format": "{name} {icon}",
     "format-icons": {
+      "1:code": "",
+      "2:web": "",
+      "3:term": "",
+      "4:slack": "",
+      "5:music": "",
       "urgent": "",
-      "focused": "",
-      "default": ""
+      "focused": "",
+      "default": ""
     }
   },
   "sway/mode": {
@@ -38,7 +43,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": " {:%a %d %b, %H:%M}",
+    "format": "{:%a %d %b, %H:%M} ",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
