@@ -59,6 +59,7 @@ assign [class="Google-chrome"] workspace $ws2
 assign [class="Slack"] workspace $ws4
 
 # Startup
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec mako
 output "*" bg $bg fill
 exec swayidle -w before-sleep 'swaylock -f -i $bglock'
