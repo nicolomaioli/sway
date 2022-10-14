@@ -6,7 +6,7 @@ set $up k
 set $right l
 set $term alacritty
 set $menu wofi --show drun -i | xargs swaymsg exec --
-set $bg ~/.local/share/backgrounds/3829125.jpg
+set $bg /usr/share/backgrounds/doomguy/3829125.jpg
 set $bglock /usr/share/backgrounds/doomguy/rickroll_4k.png
 
 set $ws1 "1"
@@ -60,6 +60,9 @@ assign [class="Slack"] workspace $ws4
 
 # Startup
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec eval $(gnome-keyring-daemon --start)
+exec export SSH_AUTH_SOCK
+exec lxpolkit
 exec mako
 output "*" bg $bg fill
 exec swayidle -w before-sleep 'swaylock -f -i $bglock'
@@ -67,7 +70,6 @@ exec_always --no-startup-id 'nm-applet --indicator'
 exec_always --no-startup-id 'blueman-applet'
 exec --no-startup-id $term --title term
 exec google-chrome-stable
-exec flatpak run com.slack.Slack
 
 # Bindings
 bindsym $mod+Return exec $term
