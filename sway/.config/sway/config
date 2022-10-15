@@ -55,7 +55,7 @@ input type:keyboard {
 # Special
 for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
 for_window [title="term"] move scratchpad
-assign [class="Google-chrome"] workspace $ws2
+assign [class="Google-chrome"] workspace $ws1
 assign [class="Slack"] workspace $ws4
 
 # Startup
