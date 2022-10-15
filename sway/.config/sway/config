@@ -59,7 +59,7 @@ assign [class="Google-chrome"] workspace $ws2
 assign [class="Slack"] workspace $ws4
 
 # Startup
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec ~/.config/sway/scripts/screenshare.sh
 exec eval $(gnome-keyring-daemon --start)
 exec export SSH_AUTH_SOCK
 exec lxpolkit

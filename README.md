@@ -1,18 +1,17 @@
 # sway
 
-Use the [dotfiles](https://github.com/nicolomaioli/dotfiles) repo to install
-and configure `sway`.
+Use the [dotfiles](https://github.com/nicolomaioli/dotfiles) repo to install and
+configure `sway`.
+
+The current configuration assumes that `sway` is been run alongside `gnome`, and
+specifically `Fedora Workstation`.
 
 ## Troubleshoot
 
-### Nautilus, and other Gnome apps not starting (wofi)
+### Chrome screensharing not working
 
-Comment out this line in `/usr/share/applications/org.gnome.Nautilus.desktop`:
+See
+["It doesn't work" Troubleshooting Checklist](https://github.com/emersion/xdg-desktop-portal-wlr/wiki/%22It-doesn't-work%22-Troubleshooting-Checklist).
 
-```
-DBusActivatable=true
-```
-
-### File downloads not working in Chrome
-
-No solution yet.
+Enable
+[WebRTC PipeWire support](chrome://flags/#enable-webrtc-pipewire-capturer).
