@@ -36,22 +36,19 @@ window#waybar {
   border-bottom: 2px solid white;
 }
 
-#clock,
 #battery,
-#pulseaudio,
-#tray,
-#mode,
+#battery.charging,
+#clock,
+#clock,
 #cpu,
-#memory,
 #language,
+#memory,
+#mode,
 #network,
 #network.disconnected,
 #pulseaudio,
 #pulseaudio.muted,
-#tray,
-#clock,
-#battery,
-#battery.charging {
+#tray {
   padding: 0 5px;
   margin: 0 5px;
 }
