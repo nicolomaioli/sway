@@ -1,7 +1,9 @@
-@define-color bg      transparent;
-@define-color fg      #ffffff;
+@define-color bg      #21262d;
+@define-color fg      #c9d1d9;
+@define-color muted   #6e7681;
 @define-color danger  #da3633;
 @define-color primary #238636;
+@define-color accent  #1f6feb;
 
 * {
   border: none;
@@ -12,7 +14,7 @@
 }
 
 window#waybar {
-  background-color: @bg;
+  background: @bg;
   color: @fg;
 }
 
@@ -25,7 +27,7 @@ window#waybar {
   padding: 0 5px;
   margin: 0 3px;
   color: @fg;
-  background-color: @bg;
+  background: @bg;
   border-bottom: 2px solid @bg;
 }
 
@@ -60,7 +62,7 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-  background-color: @danger;
+  background: @danger;
 }
 
 #custom-dnf,
@@ -70,7 +72,7 @@ window#waybar {
 }
 
 #custom-dnf.error {
-  background-color: @danger;
+  background: @danger;
 }
 
 #custom-dnf.update {
