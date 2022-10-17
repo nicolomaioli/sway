@@ -14,8 +14,17 @@
     "pulseaudio",
     "battery",
     "sway/language",
+    "custom/dnf",
     "tray"
   ],
+  "custom/dnf": {
+    "exec": "$HOME/Code/waybar-extensions/bin/dnf",
+    "return-type": "json",
+    "interval": 3600,
+    "format": "{} {icon}",
+    "format-icons": "",
+    "on-click": "alacritty -e sudo dnf update"
+  },
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,

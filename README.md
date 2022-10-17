@@ -6,6 +6,10 @@ configure `sway`.
 The current configuration assumes that `sway` is been run alongside `gnome`, and
 specifically `Fedora Workstation`.
 
+## Extensions (experimental)
+
+See [waybar-extensions](https://github.com/nicolomaioli/waybar-extensions).
+
 ## Troubleshoot
 
 ### Chrome screensharing not working

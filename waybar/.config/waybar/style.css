@@ -66,3 +66,17 @@ window#waybar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+#custom-dnf,
+#custom-dnf.ok {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+#custom-dnf.error {
+  color: red;
+}
+
+#custom-dnf.update {
+  border-bottom: 2px solid white;
+}
