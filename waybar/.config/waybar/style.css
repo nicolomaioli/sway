@@ -1,3 +1,8 @@
+@define-color bg      transparent;
+@define-color fg      #ffffff;
+@define-color danger  #da3633;
+@define-color primary #238636;
+
 * {
   border: none;
   border-radius: 0;
@@ -7,8 +12,8 @@
 }
 
 window#waybar {
-  background: transparent;
-  color: white;
+  background-color: @bg;
+  color: @fg;
 }
 
 #window {
@@ -18,9 +23,10 @@ window#waybar {
 
 #workspaces button {
   padding: 0 5px;
-  color: white;
-  background: transparent;
-  border-bottom: 2px solid transparent;
+  margin: 0 3px;
+  color: @fg;
+  background-color: @bg;
+  border-bottom: 2px solid @bg;
 }
 
 #workspaces button.focused {
@@ -33,7 +39,7 @@ window#waybar {
 }
 
 #mode {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid @fg;
 }
 
 #battery,
@@ -50,33 +56,23 @@ window#waybar {
 #pulseaudio.muted,
 #tray {
   padding: 0 5px;
-  margin: 0 5px;
-}
-
-@keyframes blink {
-  to {
-    color: red;
-  }
+  margin: 0 3px;
 }
 
 #battery.warning:not(.charging) {
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background-color: @danger;
 }
 
 #custom-dnf,
 #custom-dnf.ok {
   padding: 0 5px;
-  margin: 0 5px;
+  margin: 0 3px;
 }
 
 #custom-dnf.error {
-  color: red;
+  background-color: @danger;
 }
 
 #custom-dnf.update {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid @fg;
 }
