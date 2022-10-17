@@ -1,5 +1,6 @@
 @define-color bg      #21262d;
 @define-color fg      #c9d1d9;
+@define-color white   #ffffff;
 @define-color muted   #6e7681;
 @define-color danger  #da3633;
 @define-color primary #238636;
@@ -40,8 +41,8 @@ window {
 }
 
 #text:selected {
-  background: @primary;
-  color: @fg;
+  background: @accent;
+  color: @white;
 }
 
 #entry {
@@ -50,6 +51,6 @@ window {
 }
 
 #entry:selected {
-  background: @primary;
+  background: @accent;
   color: @fg;
 }

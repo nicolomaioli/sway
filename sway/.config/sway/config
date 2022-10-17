@@ -6,7 +6,7 @@ set $up k
 set $right l
 set $term alacritty
 set $menu wofi --show drun -i | xargs swaymsg exec --
-set $bg /usr/share/backgrounds/doomguy/3829125.jpg
+set $bgimg /usr/share/backgrounds/doomguy/3829125.jpg
 set $bglock /usr/share/backgrounds/doomguy/rickroll_4k.png
 
 set $ws1 "1"
@@ -20,12 +20,25 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+set $bg "#21262d"
+set $fg "#c9d1d9"
+set $white "#ffffff"
+set $muted "#6e7681"
+set $danger "#da3633"
+set $primary "#238636"
+set $accent "#1f6feb"
+
+# class                   border    bground   text      indicator child_border
+client.focused            $accent   $accent   $white    $accent   $accent
+client.focused_inactive   $bg       $muted    $fg       $muted    $bg
+client.unfocused          $bg       $bg       $fg       $muted    $bg
+client.urgent             $danger   $danger   $fg       $danger   $danger
+client.placeholder        $bg       $bg       $fg       $bg       $bg
+client.background         $bg
+
 # Windows
 default_border pixel 1
 default_floating_border pixel 1
-
-gaps inner 5
-gaps outer 5
 
 # Input
 input type:touchpad {
@@ -55,7 +68,7 @@ exec eval $(gnome-keyring-daemon --start)
 exec export SSH_AUTH_SOCK
 exec lxpolkit
 exec mako
-output "*" bg $bg fill
+output "*" bg $bgimg fill
 exec swayidle -w before-sleep 'swaylock -f -i $bglock'
 exec_always --no-startup-id 'nm-applet --indicator'
 exec_always --no-startup-id 'blueman-applet'
