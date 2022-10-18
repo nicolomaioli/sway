@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 IMAGE=/usr/share/backgrounds/doomguy/rickroll_4k.png
 cmd=$(echo -e "lock\nlogout\nreboot\nshutdown" | wofi -d -p system)

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 IMAGE=/tmp/swaylock.png
 
