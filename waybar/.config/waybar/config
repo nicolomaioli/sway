@@ -22,7 +22,8 @@
     "interval": 3600,
     "format": "sys {icon}",
     "format-icons": "",
-    "on-click": "alacritty -e sudo dnf update"
+    "on-click": "alacritty -e sudo dnf update; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
   },
   "sway/workspaces": {
     "disable-scroll": true,
