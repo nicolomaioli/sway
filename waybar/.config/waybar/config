@@ -20,7 +20,7 @@
     "exec": "$HOME/Code/waybar-extensions/bin/dnf",
     "return-type": "json",
     "interval": 3600,
-    "format": "sys {icon}",
+    "format": "{} {icon}",
     "format-icons": "",
     "on-click": "alacritty -e sudo dnf update; pkill -SIGRTMIN+8 waybar",
     "signal": 8
