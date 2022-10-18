@@ -30,8 +30,8 @@ set $accent "#1f6feb"
 
 # class                   border    bground   text      indicator child_border
 client.focused            $accent   $accent   $white    $accent   $accent
-client.focused_inactive   $bg       $muted    $fg       $muted    $bg
-client.unfocused          $bg       $bg       $fg       $muted    $bg
+client.focused_inactive   $muted    $muted    $white    $muted    $bg
+client.unfocused          $accent   $bg       $fg       $muted    $bg
 client.urgent             $danger   $danger   $fg       $danger   $danger
 client.placeholder        $bg       $bg       $fg       $bg       $bg
 client.background         $bg
