@@ -25,7 +25,8 @@ window#waybar {
 
 #workspaces button {
   padding: 0 0.7rem;
-  margin: 0 0.2rem;
+  margin: 0;
+  border: none;
   color: @fg;
   background: @bg;
 }
@@ -57,7 +58,8 @@ window#waybar {
 #pulseaudio.muted,
 #tray {
   padding: 0 0.7rem;
-  margin: 0 0.2rem;
+  margin: 0;
+  border: none;
 }
 
 #battery.warning:not(.charging) {
@@ -67,7 +69,8 @@ window#waybar {
 #custom-dnf,
 #custom-dnf.ok {
   padding: 0 0.7rem;
-  margin: 0 0.2rem;
+  margin: 0;
+  border: none;
 }
 
 #custom-dnf.error {
