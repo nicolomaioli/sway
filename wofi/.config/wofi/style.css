@@ -1,10 +1,9 @@
-@define-color bg      #21262d;
-@define-color fg      #c9d1d9;
-@define-color white   #ffffff;
-@define-color muted   #6e7681;
-@define-color danger  #da3633;
-@define-color primary #238636;
-@define-color accent  #1f6feb;
+@define-color bg      #282c34;
+@define-color fg      #abb2bf;
+@define-color muted   #7f848e;
+@define-color danger  #e06c75;
+@define-color primary #98c379;
+@define-color accent  #61afef;
 
 * {
   font-family: "FiraCode Nerd Font";
@@ -41,8 +40,8 @@ window {
 }
 
 #text:selected {
-  background: @accent;
-  color: @white;
+  background: @primary;
+  color: @bg;
 }
 
 #entry {
@@ -51,6 +50,6 @@ window {
 }
 
 #entry:selected {
-  background: @accent;
-  color: @fg;
+  background: @primary;
+  color: @bg;
 }

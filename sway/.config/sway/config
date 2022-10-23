@@ -20,13 +20,13 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $bg "#21262d"
-set $fg "#c9d1d9"
-set $white "#ffffff"
-set $muted "#6e7681"
-set $danger "#da3633"
-set $primary "#238636"
-set $accent "#1f6feb"
+set $bg      "#282c34"
+set $fg      "#abb2bf"
+set $muted   "#7f848e"
+set $danger  "#e06c75"
+set $primary "#98c379"
+set $accent  "#61afef"
+set $white   "#ffffff"
 
 # class                   border    bground   text      indicator child_border
 client.focused            $accent   $accent   $white    $accent   $accent
