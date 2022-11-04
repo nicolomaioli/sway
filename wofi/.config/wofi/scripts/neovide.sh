@@ -5,6 +5,7 @@ TARGET=$(find ~/Code ~/.config -mindepth 1 -maxdepth 1 -type d | wofi -d -p syst
 if [ -n "$TARGET" ]; then
 	APP_ID=$(echo $RANDOM)
 	BASEPATH=${TARGET##*/}
-	neovide $TARGET --wayland-app-id $APP_ID
+	cd $TARGET
+	neovide --wayland-app-id $APP_ID
 	swaymsg "for_window [app_id=$APP_ID] title_format 'Neovide - $BASEPATH'"
 fi
