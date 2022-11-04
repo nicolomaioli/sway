@@ -82,7 +82,7 @@ bindsym $mod+Shift+r reload
 bindsym $mod+d exec $menu
 bindsym $mod+Control+k exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym $mod+Shift+e exec ~/.config/wofi/scripts/exit.sh
-bindsym $mod+c exec ~/.config/wofi/scripts/code.sh
+bindsym $mod+c exec ~/.config/wofi/scripts/neovide.sh
 bindsym $mod+Control+q exec swaylock -i $bglock
 bindsym $mod+r mode "resize"
 
