@@ -1,9 +1,9 @@
-@define-color bg      #282c34;
-@define-color fg      #abb2bf;
-@define-color muted   #7f848e;
-@define-color danger  #e06c75;
-@define-color primary #98c379;
-@define-color accent  #61afef;
+@define-color bg      #24283b;
+@define-color fg      #c0caf5;
+@define-color muted   #565f89;
+@define-color danger  #f7768e;
+@define-color primary #9ece6a;
+@define-color accent  #7dcfff;
 
 * {
   border: none;
@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0 0.7rem;
+  padding: 0.2rem;
   margin: 0;
   border: none;
   color: @fg;
@@ -32,7 +32,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background: @primary;
+  background: @accent;
   color: @bg;
 }
 
@@ -41,13 +41,10 @@ window#waybar {
   text-shadow: inherit;
 }
 
-#mode {
-  background: @danger;
-  color: @bg;
-}
-
 #battery,
 #battery.charging,
+#custom-dnf,
+#custom-dnf.ok,
 #clock,
 #clock,
 #cpu,
@@ -59,29 +56,18 @@ window#waybar {
 #pulseaudio,
 #pulseaudio.muted,
 #tray {
-  padding: 0 0.7rem;
-  margin: 0;
-  border: none;
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.3rem;
 }
 
+.error,
+#mode,
 #battery.warning:not(.charging) {
   background: @danger;
   color: @bg;
 }
 
-#custom-dnf,
-#custom-dnf.ok {
-  padding: 0 0.7rem;
-  margin: 0;
-  border: none;
-}
-
-#custom-dnf.error {
-  background: @danger;
-  color: @bg;
-}
-
-#custom-dnf.update {
+.update {
   background: @accent;
   color: @bg;
 }

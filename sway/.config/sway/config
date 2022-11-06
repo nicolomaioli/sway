@@ -20,25 +20,25 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $bg      "#282c34"
-set $fg      "#abb2bf"
-set $muted   "#7f848e"
-set $danger  "#e06c75"
-set $primary "#98c379"
-set $accent  "#61afef"
-set $white   "#ffffff"
+set $bg      "#24283b"
+set $fg      "#c0caf5"
+set $muted   "#565f89"
+set $danger  "#f7768e"
+set $primary "#9ece6a"
+set $accent  "#7dcfff"
 
 # class                   border    bground   text      indicator child_border
-client.focused            $accent   $accent   $white    $accent   $accent
-client.focused_inactive   $muted    $muted    $white    $muted    $bg
+client.focused            $accent   $accent   $bg       $accent   $accent
+client.focused_inactive   $muted    $muted    $fg       $muted    $bg
 client.unfocused          $accent   $bg       $fg       $muted    $bg
-client.urgent             $danger   $danger   $fg       $danger   $danger
+client.urgent             $danger   $danger   $bg       $danger   $danger
 client.placeholder        $bg       $bg       $fg       $bg       $bg
 client.background         $bg
 
 # Windows
 default_border pixel 1
 default_floating_border pixel 1
+gaps inner 10
 
 # Input
 input type:touchpad {
