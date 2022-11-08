@@ -8,6 +8,7 @@ One Dark Pro
 
 Tokyonight Storm
 @define-color bg      #24283b;
+@define-color bg_dark #1f2335;
 @define-color fg      #c0caf5;
 @define-color muted   #565f89;
 @define-color danger  #f7768e;

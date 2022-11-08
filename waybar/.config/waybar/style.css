@@ -1,4 +1,5 @@
-@define-color bg      #24283b;
+@define-color bg      #292e42;
+@define-color bg_dark #1f2335;
 @define-color fg      #c0caf5;
 @define-color muted   #565f89;
 @define-color danger  #f7768e;
@@ -14,7 +15,7 @@
 }
 
 window#waybar {
-  background: @bg;
+  background: @bg_dark;
   color: @fg;
 }
 
@@ -25,8 +26,9 @@ window#waybar {
 
 #workspaces button {
   padding: 0.2rem;
-  margin: 0;
-  border: none;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.3rem;
   color: @fg;
   background: @bg;
 }
@@ -47,27 +49,28 @@ window#waybar {
 #custom-dnf.ok,
 #clock,
 #clock,
-#cpu,
 #language,
-#memory,
 #mode,
 #network,
 #network.disconnected,
 #pulseaudio,
 #pulseaudio.muted,
 #tray {
-  padding: 0.2rem 0.7rem;
-  margin: 0 0.3rem;
+  padding: 0.2rem 0.6rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-right: 0.3rem;
+  background: @bg;
 }
 
-.error,
+#custom-dnf.error,
 #mode,
 #battery.warning:not(.charging) {
   background: @danger;
   color: @bg;
 }
 
-.update {
+#custom-dnf.update {
   background: @accent;
   color: @bg;
 }
