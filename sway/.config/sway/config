@@ -58,9 +58,9 @@ input type:keyboard {
 
 # Special
 for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
-for_window [title="term"] move scratchpad
 assign [class="Google-chrome"] workspace $ws1
-assign [class="Slack"] workspace $ws4
+assign [app_id="Alacritty"] workspace $ws2
+assign [class="Slack"] workspace $ws3
 
 # Startup
 exec ~/.config/sway/scripts/screenshare.sh
@@ -72,8 +72,8 @@ output "*" bg $bgimg fill
 exec swayidle -w before-sleep 'swaylock -f -i $bglock'
 exec_always --no-startup-id 'nm-applet --indicator'
 exec_always --no-startup-id 'blueman-applet'
-exec --no-startup-id $term --title term
 exec google-chrome-stable
+exec $term
 
 # Bindings
 bindsym $mod+Return exec $term
