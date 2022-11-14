@@ -4,7 +4,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term alacritty
+set $term wezterm
 set $menu wofi --show drun -i | xargs swaymsg exec --
 set $bgimg /usr/share/backgrounds/doomguy/3829125.jpg
 set $bglock /usr/share/backgrounds/doomguy/rickroll_4k.png
@@ -59,7 +59,7 @@ input type:keyboard {
 # Special
 for_window [app_id="pavucontrol"] floating enable, resize set width 550px height 600px
 assign [class="Google-chrome"] workspace $ws1
-assign [app_id="Alacritty"] workspace $ws2
+assign [app_id="org.wezfurlong.wezterm"] workspace $ws2
 assign [class="Slack"] workspace $ws3
 
 # Startup
