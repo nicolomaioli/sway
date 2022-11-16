@@ -22,7 +22,7 @@
     "interval": 3600,
     "format": "{} {icon}",
     "format-icons": "",
-    "on-click": "alacritty -e sudo dnf update; pkill -SIGRTMIN+8 waybar",
+    "on-click": "wezterm cli spawn --new-window -- sudo dnf update; pkill -SIGRTMIN+8 waybar",
     "signal": 8
   },
   "sway/workspaces": {
